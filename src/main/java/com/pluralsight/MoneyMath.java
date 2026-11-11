@@ -52,6 +52,14 @@ public class MoneyMath {
             System.out.println();
         }
 
+        // print final amount
+        System.out.println("=================================");
+        System.out.println("=================================");
+        System.out.println("Float: " + floatAmount);
+        System.out.println("Double: " + doubleAmount);
+        System.out.println("BigDecimal: " + bigDecimalAmount);
+
+
 
     }
 }
