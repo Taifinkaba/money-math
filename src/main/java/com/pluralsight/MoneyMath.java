@@ -59,7 +59,36 @@ public class MoneyMath {
         System.out.println("Double: " + doubleAmount);
         System.out.println("BigDecimal: " + bigDecimalAmount);
 
+        // stores the exact expected answer
+        BigDecimal expectedAmount = new BigDecimal("19990.00");
 
+        // convert float into BigDecimal
+        BigDecimal floatResult = new BigDecimal(Float.toString(floatAmount));
+
+        // find the difference between float and exact answer
+        BigDecimal floatDifference = floatResult.subtract(expectedAmount);
+
+        // convert the difference from dollars into cents
+        double centsOff = floatDifference.doubleValue() * 100;
+
+        // print the float difference in dollars and cents
+        System.out.println("Float difference in dollars: " + floatDifference);
+        System.out.println("Float difference in cents: " + centsOff);
+
+        // convert double into BigDecimal
+        BigDecimal doubleResult = BigDecimal.valueOf(doubleAmount);
+
+        // compare float with double and print
+        boolean floatEqualsDouble = floatResult.compareTo(doubleResult) == 0;
+        System.out.println("Float equals double: " + floatEqualsDouble);
+
+        // compare double with BigDecimal and print
+        boolean doubleEqualsBigDecimal = doubleResult.compareTo(bigDecimalAmount) == 0;
+        System.out.println("Double equals BigDecimal: " + doubleEqualsBigDecimal);
+
+        // compare float with BigDecimal and print
+        boolean floatEqualsBigDecimal = floatResult.compareTo(bigDecimalAmount) == 0;
+        System.out.println("Float equals BigDecimal: " + floatEqualsBigDecimal);
 
     }
 }
