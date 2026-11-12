@@ -42,14 +42,6 @@ public class MoneyMath {
 
             bigDecimalAmount = bigDecimalAmount.add(new BigDecimal("19.99"));
 
-            // verify amount
-            System.out.println("Round: " + i);
-            System.out.println("Float: " + floatAmount);
-            System.out.println("Double: " + doubleAmount);
-            System.out.println("BigDecimal: " + bigDecimalAmount);
-
-            // empty line - the console is getting hard to read
-            System.out.println();
         }
 
         // print final amount
